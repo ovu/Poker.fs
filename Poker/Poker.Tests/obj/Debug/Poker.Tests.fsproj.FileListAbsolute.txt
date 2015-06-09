@@ -1,1 +1,14 @@
 C:\Fsharp\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.fsprojResolveAssemblyReference.cache
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.Tests.XML
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.Tests.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.Tests.pdb
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\FSharp.Core.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.exe
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.pdb
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\Poker.xml
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\FSharp.Core.xml
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.xml
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.fsprojResolveAssemblyReference.cache
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.pdb
