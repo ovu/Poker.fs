@@ -59,6 +59,7 @@ module Poker =
     type GetWinnerClassifier = Hand -> Hand -> Hand list
 
     let GetWinners : GetWinnerClassifier = 
+<<<<<<< HEAD
         fun hand1 hand2 -> 
             let firstHandCombination = GetHandCombination hand1 
             let secondHandCombination = GetHandCombination hand2
@@ -69,3 +70,6 @@ module Poker =
                 [hand1;hand2] 
             else 
                 [hand2]
+=======
+        fun hand1 hand2 -> [hand1;hand2]
+>>>>>>> 4b23e78bc8bc7ac4b605e98b58f1d4df58b1a82e
