@@ -55,3 +55,8 @@ module Poker =
             match hand with
             | x when handHasOnePair x -> OnePair
             | _ -> HighCard
+
+    type GetWinnerClassifier = Hand -> Hand -> Hand list
+
+    let GetWinners : GetWinnerClassifier = 
+        fun hand1 hand2 -> [hand1;hand2]
