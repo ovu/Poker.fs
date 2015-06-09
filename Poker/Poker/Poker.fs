@@ -42,24 +42,24 @@ module Poker =
     
     type HandClassifier = Hand -> HandCombination
     
-    type CombinationCheck = Hand -> bool
+    type PairsCheck = Hand -> int -> bool
     
-    let handHasOnePair : CombinationCheck = 
-        fun hand -> 
+    let handHasPairs : PairsCheck = 
+        fun hand n -> 
             (hand
              |> Seq.groupBy (fun card -> card.Value)
-             |> Seq.exists (fun g -> Seq.length (snd g) = 2))
+             |> Seq.where (fun g -> Seq.length (snd g) = 2) |> Seq.length) = n
     
     let GetHandCombination : HandClassifier = 
         fun hand -> 
             match hand with
-            | x when handHasOnePair x -> OnePair
+            | x when handHasPairs x 1 -> OnePair
+            | x when handHasPairs x 2 -> TwoPair
             | _ -> HighCard
 
     type GetWinnerClassifier = Hand -> Hand -> Hand list
 
-    let GetWinners : GetWinnerClassifier = 
-<<<<<<< HEAD
+    let GetWinners : GetWinnerClassifier =
         fun hand1 hand2 -> 
             let firstHandCombination = GetHandCombination hand1 
             let secondHandCombination = GetHandCombination hand2
@@ -70,6 +70,3 @@ module Poker =
                 [hand1;hand2] 
             else 
                 [hand2]
-=======
-        fun hand1 hand2 -> [hand1;hand2]
->>>>>>> 4b23e78bc8bc7ac4b605e98b58f1d4df58b1a82e

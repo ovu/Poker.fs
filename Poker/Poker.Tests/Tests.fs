@@ -84,3 +84,51 @@ module Tests =
 
         // Assert
         Xunit.Assert.True ([hand] = result)
+        
+    [<Fact>]
+    let When_second_hand_has_OnePair_and_the_other_has_HighCard_the_winner_is_the_hand_with_OnePair() =
+        // Arrange
+        let hand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number3; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+
+        let secondHand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+        // Act
+        let result = GetWinners hand secondHand
+
+        // Assert
+        Xunit.Assert.True ([secondHand] = result)
+
+    [<Fact>]
+    let When_first_hand_has_TwoPair_and_the_other_has_OnePair_the_winner_is_the_hand_with_TwoPair() =
+        // Arrange
+        let hand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+
+        let secondHand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+        // Act
+        let result = GetWinners hand secondHand
+
+        // Assert
+        Xunit.Assert.True ([hand] = result)
