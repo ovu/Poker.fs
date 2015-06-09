@@ -44,6 +44,14 @@ module Poker =
     
     type SameOfAKindCheck = Hand -> int -> int -> bool
     
+    type StraightCheck = Hand -> bool
+
+    let (|ValueRank|) card = 
+        Microsoft.FSharp.Reflection.FSharpValue.PreComputeUnionTagReader (typeof<CardValue>) (box card.Value)
+         
+    let hasStraight : StraightCheck = 
+        fun hand -> hand |> Seq.sort |> Seq.pairwise |> Seq.forall (fun (ValueRank a, ValueRank b) -> b - a = 1)
+
     let handHasSameOfAKind : SameOfAKindCheck = 
         fun hand groupCount groupLength -> 
             (hand
@@ -54,8 +62,9 @@ module Poker =
         fun hand -> 
             match hand with
             | x when handHasSameOfAKind x 1 2 -> OnePair
-            | x when handHasSameOfAKind x 2 2-> TwoPair
-            | x when handHasSameOfAKind x 1 3-> ThreeOfAKind
+            | x when handHasSameOfAKind x 2 2 -> TwoPair
+            | x when handHasSameOfAKind x 1 3 -> ThreeOfAKind
+            | x when hasStraight x -> Straight
             | _ -> HighCard
 
     type GetWinnerClassifier = Hand -> Hand -> Hand list
