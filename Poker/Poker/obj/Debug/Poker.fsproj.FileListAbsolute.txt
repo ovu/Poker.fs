@@ -1,0 +1,7 @@
+C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\Poker.XML
+C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\Poker.exe
+C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\Poker.pdb
+C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.dll
+C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.xml
+C:\github\Poker\Poker.fs\Poker\Poker\obj\Debug\Poker.exe
+C:\github\Poker\Poker.fs\Poker\Poker\obj\Debug\Poker.pdb

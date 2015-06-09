@@ -1,6 +1,7 @@
 ﻿namespace Poker.Tests
 
 open Xunit
+open Schulung.Poker
 
 module Tests =
     let When_a_hand_has_no_combination_the_score_is_the_highest_card() = 
@@ -13,7 +14,7 @@ module Tests =
                    {Number =9; Suit = Diamond; }
                    ]
         // Act
-        let result = GetHandCombination hand
+        let result = Poker.GetHandCombination hand
 
         // Assert
         Xunit.Assert.Equal(HighCard, result)
