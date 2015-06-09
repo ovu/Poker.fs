@@ -39,4 +39,8 @@ module Poker =
     | StraightFlush
     | RoyalFlush
 
-    let GetHandCombination hand = HighCard
+    type Hand = Card list
+
+    type HandClassifier = Hand -> HandCombination
+
+    let GetHandCombination: HandClassifier = fun hand -> HighCard

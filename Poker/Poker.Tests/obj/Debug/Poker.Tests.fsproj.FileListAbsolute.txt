@@ -12,3 +12,6 @@ C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.xml
 C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.fsprojResolveAssemblyReference.cache
 C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.dll
 C:\github\Poker\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.pdb
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.runner.utility.desktop.dll
+C:\github\Poker\Poker.fs\Poker\Poker.Tests\bin\Debug\xunit.abstractions.dll
