@@ -38,7 +38,7 @@ module Tests =
         Xunit.Assert.Equal(HandCombination.OnePair, result)
 
     [<Fact>]
-    let When_both_hands_have_one_pair_it_should_return_the_two_hands() =
+    let When_both_hands_have_OnePair_it_returns_the_two_hands() =
         // Arrange
         let hand = [
                    {Value = CardValue.Number2; Suit = Diamonds; }
@@ -59,5 +59,28 @@ module Tests =
         let result = GetWinners hand secondHand
 
         // Assert
+        Xunit.Assert.True ([hand; secondHand] = result)
+        
+    [<Fact>]
+    let When_one_hand_has_OnePair_and_the_other_has_HighCard_the_winner_is_the_hand_with_OnePair() =
+        // Arrange
+        let hand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
 
-        Xunit.Assert.Equal (2, Seq.length result)
+        let secondHand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number3; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+        // Act
+        let result = GetWinners hand secondHand
+
+        // Assert
+        Xunit.Assert.True ([hand] = result)
