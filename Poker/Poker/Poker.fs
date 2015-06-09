@@ -15,8 +15,9 @@ module Poker =
     | Number of int
 
     type Card = {
-        Suit : Suit
         Value : CardValue
+        Suit : Suit
     }
+
 
     let GetHandCombination hand = ()

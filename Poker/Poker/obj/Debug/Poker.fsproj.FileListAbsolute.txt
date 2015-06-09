@@ -5,3 +5,10 @@ C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.dll
 C:\github\Poker\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.xml
 C:\github\Poker\Poker.fs\Poker\Poker\obj\Debug\Poker.exe
 C:\github\Poker\Poker.fs\Poker\Poker\obj\Debug\Poker.pdb
+C:\Fsharp\Poker.fs\Poker\Poker\bin\Debug\Poker.XML
+C:\Fsharp\Poker.fs\Poker\Poker\bin\Debug\Poker.exe
+C:\Fsharp\Poker.fs\Poker\Poker\bin\Debug\Poker.pdb
+C:\Fsharp\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.dll
+C:\Fsharp\Poker.fs\Poker\Poker\bin\Debug\FSharp.Core.xml
+C:\Fsharp\Poker.fs\Poker\Poker\obj\Debug\Poker.exe
+C:\Fsharp\Poker.fs\Poker\Poker\obj\Debug\Poker.pdb

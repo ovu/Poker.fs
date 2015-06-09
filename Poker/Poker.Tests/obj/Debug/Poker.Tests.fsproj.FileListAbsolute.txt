@@ -1,0 +1,1 @@
+C:\Fsharp\Poker.fs\Poker\Poker.Tests\obj\Debug\Poker.Tests.fsprojResolveAssemblyReference.cache
