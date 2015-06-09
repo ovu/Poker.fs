@@ -132,3 +132,27 @@ module Tests =
 
         // Assert
         Xunit.Assert.True ([hand] = result)
+
+    [<Fact>]
+    let When_one_hand_has_OnePair_and_the_other_has_ThreeOfAKind_then_the_winner_is_three_of_a_kind() =
+        // Arrange
+        let hand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+
+        let secondHand = [
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number2; Suit = Diamonds; }
+                   {Value = CardValue.Number6; Suit = Diamonds; }
+                   {Value = CardValue.Number7; Suit = Diamonds; }
+                   {Value = CardValue.Number9; Suit = Diamonds; }
+                   ]
+        // Act
+        let result = GetWinners hand secondHand
+
+        // Assert
+        Xunit.Assert.True ([hand] = result)

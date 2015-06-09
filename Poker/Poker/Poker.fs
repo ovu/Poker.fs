@@ -42,19 +42,20 @@ module Poker =
     
     type HandClassifier = Hand -> HandCombination
     
-    type PairsCheck = Hand -> int -> bool
+    type SameOfAKindCheck = Hand -> int -> int -> bool
     
-    let handHasPairs : PairsCheck = 
-        fun hand n -> 
+    let handHasSameOfAKind : SameOfAKindCheck = 
+        fun hand groupCount groupLength -> 
             (hand
              |> Seq.groupBy (fun card -> card.Value)
-             |> Seq.where (fun g -> Seq.length (snd g) = 2) |> Seq.length) = n
+             |> Seq.where (fun g -> Seq.length (snd g) = groupLength) |> Seq.length) = groupCount
     
     let GetHandCombination : HandClassifier = 
         fun hand -> 
             match hand with
-            | x when handHasPairs x 1 -> OnePair
-            | x when handHasPairs x 2 -> TwoPair
+            | x when handHasSameOfAKind x 1 2 -> OnePair
+            | x when handHasSameOfAKind x 2 2-> TwoPair
+            | x when handHasSameOfAKind x 1 3-> ThreeOfAKind
             | _ -> HighCard
 
     type GetWinnerClassifier = Hand -> Hand -> Hand list
